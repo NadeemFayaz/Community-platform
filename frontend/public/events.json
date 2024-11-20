@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "React Workshop",
+      "date": "2024-11-20",
+      "location": "Online",
+      "description": "An in-depth React.js workshop for beginners."
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Basics",
+      "date": "2024-11-25",
+      "location": "In-Person",
+      "description": "Learn the fundamentals of JavaScript in this interactive session."
+    },
+    {
+      "id": 3,
+      "title": "Advanced Node.js",
+      "date": "2024-12-01",
+      "location": "Hybrid",
+      "description": "Master Node.js with this advanced workshop."
+    }
+  ]
+  

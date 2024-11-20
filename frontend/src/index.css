@@ -1,0 +1,15 @@
+/* src/index.css or Tailwind setup */
+.resource-card,
+.community-card {
+  @apply p-4 border rounded shadow hover:shadow-md transition-shadow duration-200;
+}
+
+.resource-card h4,
+.community-card h4 {
+  @apply text-lg font-semibold text-blue-600;
+}
+
+.resource-card p,
+.community-card p {
+  @apply text-sm text-gray-800 mt-2;
+}
