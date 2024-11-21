@@ -10,6 +10,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const SECRET_KEY = process.env.SECRET_KEY;
 
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
@@ -26,7 +30,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // User Registration
-app.post('/api/register', async (req, res) => {
+app.post('/api/signup', async (req, res) => {
   const { username, email, password } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
   const newUser = new User({ username, email, password: hashedPassword });
