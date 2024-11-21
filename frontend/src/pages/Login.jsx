@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext.jsx';
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +20,10 @@ export default function Login() {
       });
 
       if (response.ok) {
-        navigate('/home'); // Correct path to navigate to the home page
+        const data = await response.json();
+        console.log('Token:', data.token); // Debugging
+        login(data.token); // Set authentication state
+        navigate('/home'); // Navigate to the home page
       } else {
         const errorData = await response.json();
         setError(errorData.message || 'An error occurred while logging in');

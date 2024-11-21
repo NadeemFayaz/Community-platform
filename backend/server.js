@@ -15,10 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/community-platform', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/community-platform');
 
 // Define User Schema and Model
 const userSchema = new mongoose.Schema({
@@ -57,6 +54,79 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
   res.send('Welcome to the Home page');
 });
+
+
+//fetch announcements
+app.get('/api/announcements', async (req, res) => {
+  const announcements = [
+    {
+      id: 1,
+      title: 'Announcement 1',
+      content: 'This is the first announcement',
+      date: '2021-10-01',
+    },
+    {
+      id: 2,
+      title: 'Announcement 2',
+      content: 'This is the second announcement',
+      date: '2021-10-02',
+    },
+  ];
+  res.json(announcements);
+});
+
+//fetch events
+
+app.get('/api/events', async (req, res) => {
+  const events = [
+    {
+      id: 1,
+      title: 'Event 1',
+      date: '2021-10-01',
+    },
+    {
+      id: 2,
+      title: 'Event 2',
+      date: '2021-10-02',
+    },
+  ];
+  res.json(events);
+});
+
+//fetch resources
+app.get('/api/resources', async (req, res) => {
+  const resources = [
+    {
+      id: 1,
+      title: 'Resource 1',
+      description: 'This is the first resource',
+    },
+    {
+      id: 2,
+      title: 'Resource 2',
+      description: 'This is the second resource',
+    },
+  ];
+  res.json(resources);
+});
+
+//fetch community highlights
+app.get('/api/community', async (req, res) => {
+  const community = [
+    {
+      id: 1,
+      name: 'Community 1',
+      description: 'This is the first community',
+    },
+    {
+      id: 2,
+      name: 'Community 2',
+      description: 'This is the second community',
+    },
+  ];
+  res.json(community);
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

@@ -7,6 +7,8 @@ import AuthProvider from './context/AuthContext.jsx';
 import EventsCarousel from './features/EventsCarousel.jsx';
 import SignUp from './pages/SignUp.jsx';
 import LandingPage from './pages/LandingPage.jsx';
+import Announcements from './features/Announcements.jsx'; // Ensure this import
+import StartLearning from './features/StartLearning.jsx'; // Ensure this import
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/eventscarousel" element={<EventsCarousel />} />
+          <Route path="/announcements" element={<Announcements />} />
+          <Route path="/start-learning" element={<StartLearning />} />
           
           {/* Protected Routes */}
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />

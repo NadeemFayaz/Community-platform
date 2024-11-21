@@ -1,0 +1,25 @@
+/* Home.css */
+.tutorial-videos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .tutorial-videos .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+  
+  .tutorial-videos .card h3 {
+    margin-top: 0;
+  }
+  
+  .tutorial-videos .card p {
+    margin: 10px 0;
+  }
