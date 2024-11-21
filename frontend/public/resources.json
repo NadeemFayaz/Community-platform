@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Lesson Plan: Introduction to Algebra",
+      "category": "Lesson Plans",
+      "description": "A comprehensive lesson plan to introduce students to algebraic concepts.",
+      "previewLink": "/resources/lesson-plan-algebra",
+      "downloadLink": "/resources/download/lesson-plan-algebra"
+    },
+    {
+      "id": 2,
+      "title": "Interactive Coursebook: Physics Fundamentals",
+      "category": "Coursebooks",
+      "description": "A digital coursebook with interactive activities and assessments.",
+      "previewLink": "/resources/physics-coursebook",
+      "downloadLink": "/resources/download/physics-coursebook"
+    },
+    {
+        "id": 3,
+        "title": "Worksheet: Multiplication Practice",
+        "category": "Worksheets",
+        "description": "A set of multiplication problems for students to practice.",
+        "previewLink": "/resources/multiplication-worksheet",
+        "downloadLink": "/resources/download/multiplication-worksheet"
+    }
+  ]
+  

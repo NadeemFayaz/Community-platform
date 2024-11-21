@@ -38,6 +38,21 @@ const Home = () => {
       description: 'Description for Tutorial 3',
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60jwru2L1khN6GEYajlS1NZqXyExvaoXxsQ&s',
     },
+    {
+      title: 'Tutorial 4',
+      description: 'Description for Tutorial 4',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1igX43IrQ9ZdkIm4Y_jNuikMvS93KanU1Xg&s',
+    },
+    {
+      title: 'Tutorial 5',
+      description: 'Description for Tutorial 5',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60jwru2L1khN6GEYajlS1NZqXyExvaoXxsQ&s',
+    },
+    {
+      title: 'Tutorial 6',
+      description: 'Description for Tutorial 6',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1igX43IrQ9ZdkIm4Y_jNuikMvS93KanU1Xg&s',
+    },
   ];
 
   return (
@@ -47,7 +62,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content text-center py-10">
           <h1 className="text-4xl font-bold">Welcome to the Community Platform</h1>
-          <p className="mt-4 text-lg">Join, Learn, and Share Knowledge with Peers</p>
+      
           <div className="mt-6">
             <button onClick={handleStartLearning} className="btn-primary mr-4">Explore Events</button>
             <button className="btn-secondary">Start Learning</button>
@@ -84,17 +99,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Announcements / News Feed */}
-      <section className="announcements my-10">
-        <h2 className="text-2xl font-semibold mb-4">Latest Announcements</h2>
-        <Announcements />
-      </section>
-
-      {/* Trending Events */}
-      <section className="trending-events my-10">
-        <h2 className="text-2xl font-semibold mb-4">Trending Events</h2>
-        <EventsCarousel />
-      </section>
+  
 
       {/* Teaching Resources Highlights */}
       <section className="resources-highlights my-10">

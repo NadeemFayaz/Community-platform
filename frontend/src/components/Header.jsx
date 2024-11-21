@@ -1,6 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const styles = {
+  header: {
+    backgroundColor: '#f8f9fa',
+    padding: '10px 20px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  },
+  nav: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  logo: {
+    fontSize: '1.5em',
+    fontWeight: 'bold',
+  },
+  logoLink: {
+    textDecoration: 'none',
+    color: '#007BFF',
+  },
+  navList: {
+    listStyleType: 'none',
+    display: 'flex',
+    gap: '20px',
+    margin: 0,
+    padding: 0,
+  },
+  navItem: {
+    fontSize: '1em',
+  },
+  navLink: {
+    textDecoration: 'none',
+    color: '#007BFF',
+  },
+};
+
 const Header = () => {
   return (
     <header style={styles.header}>
@@ -18,47 +53,13 @@ const Header = () => {
           <li style={styles.navItem}>
             <Link to="/announcements" style={styles.navLink}>Announcements</Link>
           </li>
+          <li style={styles.navItem}>
+            <Link to="/community" style={styles.navLink}>Community Highlights</Link>
+          </li>
         </ul>
       </nav>
     </header>
   );
-};
-
-const styles = {
-  header: {
-    backgroundColor: '#333',
-    padding: '10px 0',
-  },
-  nav: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 20px',
-  },
-  logo: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-  },
-  logoLink: {
-    color: '#fff',
-    textDecoration: 'none',
-  },
-  navList: {
-    listStyle: 'none',
-    display: 'flex',
-    margin: 0,
-    padding: 0,
-  },
-  navItem: {
-    marginLeft: '20px',
-  },
-  navLink: {
-    color: '#fff',
-    textDecoration: 'none',
-    fontSize: '18px',
-  },
 };
 
 export default Header;

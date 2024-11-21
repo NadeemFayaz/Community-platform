@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "question": "How can I make virtual classrooms more engaging?",
+      "author": "TutorJohn",
+      "replies": 15,
+      "upvotes": 20,
+      "tags": ["teaching", "engagement", "virtual"],
+      "createdAt": "2024-11-10"
+    },
+    {
+      "id": 2,
+      "question": "What are the best resources for high school math?",
+      "author": "TeacherMary",
+      "replies": 8,
+      "upvotes": 12,
+      "tags": ["math", "resources", "high school"],
+      "createdAt": "2024-11-12"
+    },
+    {
+      "id": 3,
+      "question": "What tools do you recommend for online collaboration?",
+      "author": "AdminDave",
+      "replies": 25,
+      "upvotes": 30,
+      "tags": ["tools", "collaboration", "online"],
+      "createdAt": "2024-11-14"
+    }
+  ]
+  

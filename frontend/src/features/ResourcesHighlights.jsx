@@ -1,36 +1,75 @@
 import React, { useEffect, useState } from 'react';
 
-export default function ResourcesHighlights() {
+const ResourcesHighlights = () => {
   const [resources, setResources] = useState([]);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchResources = async () => {
-      try {
-        const response = await fetch('http://localhost:5000/api/resources'); // Adjust the endpoint as needed
+    fetch('/resources.json')
+      .then((response) => {
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error('Network response was not ok');
         }
-        const data = await response.json();
-        setResources(data);
-      } catch (error) {
-        setError('Error fetching resources');
-        console.error('Error fetching resources:', error);
-      }
-    };
-
-    fetchResources();
+        return response.json();
+      })
+      .then((data) => setResources(data))
+      .catch((error) => setError(error.message));
   }, []);
 
+  const containerStyle = {
+    padding: '20px',
+    fontFamily: 'Arial, sans-serif',
+  };
+
+  const listStyle = {
+    listStyleType: 'none',
+    padding: 0,
+  };
+
+  const listItemStyle = {
+    marginBottom: '20px',
+    padding: '10px',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    backgroundColor: '#f9f9f9',
+  };
+
+  const keyStyle = {
+    fontWeight: 'bold',
+  };
+
+  const linkStyle = {
+    color: '#007BFF',
+    textDecoration: 'none',
+  };
+
   return (
-    <div>
+    <div style={containerStyle}>
       <h2>Resources Highlights</h2>
       {error && <p>{error}</p>}
-      <ul>
+      <ul style={listStyle}>
         {resources.map((resource, index) => (
-          <li key={index}>{resource.title}</li>
+          <li key={index} style={listItemStyle}>
+            {Object.entries(resource).map(([key, value]) => {
+              if (key === 'id') return null;
+              if (key === 'downloadLink') {
+                return (
+                  <div key={key}>
+                    <span style={keyStyle}>{key}:</span> <a href={value} target="_blank" rel="noopener noreferrer" style={linkStyle}>Download</a>
+                  </div>
+                );
+              }
+              return (
+                <div key={key}>
+                  <span style={keyStyle}>{key}:</span> {value}
+                </div>
+              );
+            })}
+          </li>
         ))}
       </ul>
     </div>
   );
-}
+};
+
+export default ResourcesHighlights;
