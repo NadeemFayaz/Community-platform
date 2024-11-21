@@ -31,7 +31,7 @@ const Home = () => {
     {
       title: 'Tutorial 2',
       description: 'Description for Tutorial 2',
-      imageUrl: 'https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/C-Programming-Tutorial-1.jpg',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1igX43IrQ9ZdkIm4Y_jNuikMvS93KanU1Xg&s',
     },
     {
       title: 'Tutorial 3',
